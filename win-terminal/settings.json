@@ -25,7 +25,7 @@
     "theme": "dark", // tab bar color theme not for gui
     "initialPosition": "4000,40", // launch position padding (4000 push it into second screen)
     
-    "launchMode": "fullscreen",
+    //"launchMode": "fullscreen",
     "initialCols": 104, // window width - ignored when launchMode is "maximized" or "fullscreen"
     "initialRows": 52, // window height
 

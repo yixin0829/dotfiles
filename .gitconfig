@@ -13,5 +13,14 @@
  	l = log
  	com = commit -m
  	p = push
+
+ 	# list aliases
+ 	aliases = config --get-regexp alias
 [color]
- 	ui = true
+ 	ui = auto
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = true
+	fscache = true
+	symlinks = true

@@ -1,5 +1,5 @@
 cd D:/interview_prep
-set -o vi
+set -o vi 
 
 alias q='exit'
 alias c='clear'
