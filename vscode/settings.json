@@ -1,0 +1,106 @@
+{
+    "workbench.colorCustomizations": {
+
+
+    },
+    "materialTheme.accent": "Remove accents",
+    "editor.fontSize": 15,
+    "remote.SSH.remotePlatform": {
+        "ug54.eecg.toronto.edu": "linux",
+        "ug175.eecg.utoronto.ca": "linux",
+        "ug146.eecg.utoronto.ca": "linux",
+        "ug147.eecg.utoronto.ca": "linux"
+    },
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "explorer.confirmDelete": false,
+    "search.sortOrder": "type",
+    "explorer.sortOrder": "type",
+    "launch": {
+
+
+    
+    },
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "#70415b"
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "backgroundColor": "#394d6e"
+        },
+        {
+            "tag": "#",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "@",
+            "color": "#56afb3",
+            "strikethrough": false,
+            "backgroundColor": "#476061"
+        },
+
+    ],
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "C_Cpp.updateChannel": "Default",
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+    "C_Cpp.default.includePath": "C:\\MinGW\\lib\\gcc\\mingw32\\9.2.0\\include\\c++",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "files.associations": {
+        "*.cpp": "cpp"
+    },
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Material Theme Palenight",
+    "python.defaultInterpreterPath": "C:\\Users\\yixin\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+    "apexSql.servers": [
+        {
+            "connectionId": "5d9118bf-4e4f-4e0c-b82b-95f5042f6e56",
+            "connectionName": "localhost:3306 (root)",
+            "database": null,
+            "executionTimeout": 7200,
+            "connectionType": 0,
+            "locationSSH": "",
+            "passphraseSSH": "",
+            "password": "7LXQwnlhCFL3XtWWNXX1wjZZPNmYMqQcDuN04WFG2fihnfnMjMClcPZJnY2NnBgY",
+            "saveCredentials": true,
+            "passwordSSH": "",
+            "pipename": "MySQL",
+            "port": 3306,
+            "portSSH": 22,
+            "server": "localhost",
+            "serverSSH": "",
+            "serverType": 0,
+            "showSystemDatabases": false,
+            "timeout": 15,
+            "username": "root",
+            "userSSH": "",
+            "useSSHKey": false,
+            "caFileSSL": "",
+            "certFileSSL": "",
+            "keyFileSSL": ""
+        }
+    ],
+    "python.showStartPage": false,
+    "jupyter.alwaysTrustNotebooks": true,
+    "jupyter.askForKernelRestart": false,
+    "editor.lineNumbers": "relative",
+    "editor.cursorBlinking": "solid",
+    "vim.commandLineModeKeyBindings": [],
+
+}

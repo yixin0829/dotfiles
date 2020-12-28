@@ -1,0 +1,17 @@
+[user]
+	email = 56566212+yixin0829@users.noreply.github.com
+	name = yixin0829
+	editor = vim
+[credential]
+	helper = wincred
+[alias]
+	aa = add --all
+ 	st = status
+ 	br = branch
+ 	co = checkout
+ 	save = commit -a -m "Save" 
+ 	l = log
+ 	com = commit -m
+ 	p = push
+[color]
+ 	ui = true

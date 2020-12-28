@@ -1,0 +1,20 @@
+{
+	"Yixin Main": {
+		"prefix": "main_usr",
+		"body": [
+		  "#include <iostream>",
+		  "#include <algorithm>",
+		  "#include <cmath>",
+		  "#include <vector>\n",
+		  "using namespace std;",
+		  "",
+		  "${1:/* Your solution class */}",
+		  "",
+		  "int main() {",
+		  "    /* Your code */",
+		  "    return 0;",
+		  "}"
+		],
+		"description": "A snippet defined by Yixin to setup libs and main quickly"
+	  }
+}
