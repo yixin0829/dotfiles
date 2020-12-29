@@ -25,9 +25,10 @@
     "theme": "dark", // tab bar color theme not for gui
     "initialPosition": "4000,40", // launch position padding (4000 push it into second screen)
     
-    //"launchMode": "fullscreen",
-    "initialCols": 104, // window width - ignored when launchMode is "maximized" or "fullscreen"
-    "initialRows": 52, // window height
+    "launchMode": "fullscreen",
+    "initialCols": 100, // window width - ignored when launchMode is "maximized" or "fullscreen"
+    "initialRows": 50, // window height
+    "multiLinePasteWarning": false,
 
 
 
@@ -42,12 +43,12 @@
             // Put settings here that you want to apply to all profiles.
             "useAcrylic": false,
             "acrylicOpacity": 0.4,
-            "fontFace":  "Cascadia Code PL",// PL stands for powerline font. it enables vim airline plugin
+            "fontSize": 12,
+            "fontFace":  "Hack NF", // currently using Hack Nerd Font (windows compatible)
             "cursorShape": "vintage",
             "padding" : "0, 0, 0, 0",
             "scrollbarState": "hidden",
-            "snapOnInput" : true,
-            "multiLinePasteWarning": false
+            "snapOnInput" : true
         },
         "list":
         [
@@ -149,6 +150,17 @@
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+        { "command": { "action": "splitPane", "split": "vertical", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+        { "command": "closePane", "keys": "ctrl+shift+w" },
+
+        { "command": { "action": "resizePane", "direction": "down" }, "keys": "alt+shift+j" },
+        { "command": { "action": "resizePane", "direction": "left" }, "keys": "alt+shift+h" },
+        { "command": { "action": "resizePane", "direction": "right" }, "keys": "alt+shift+l" },
+        { "command": { "action": "resizePane", "direction": "up" }, "keys": "alt+shift+k" },
+        { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+j" },
+        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+h" },
+        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+l" },
+        { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+k" },
+
     ]
 }
