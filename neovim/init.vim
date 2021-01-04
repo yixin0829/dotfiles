@@ -2,16 +2,15 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'Raimondi/delimitMate'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
-Plug 'ryanoasis/vim-devicons'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'preservim/nerdcommenter'
 Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdtree'
-
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()
 
@@ -31,7 +30,8 @@ set foldlevel=99
 "Enable folding with the spacebar
 nnoremap <space> za
 
-
+"set using nerd font (airline, nerdtree, devicons)
+set guifont=Hack\ NF\ 12
 
 au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.md,*.html
     \ set tabstop=4 |
@@ -42,6 +42,7 @@ au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.md,*.html
     \ set autoindent |
     \ set fileformat=unix |
 
+"extra line for noting since neovim use utf-8 as default encoding
 set encoding=utf-8
 
 " turn on the syntax highlighting
@@ -72,6 +73,10 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
+
+" vim-nerdtree-syntax-highlighting config
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -160,9 +165,9 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " run code
 augroup compileandrun
     autocmd!
-    autocmd FileType python map <buffer> <f8> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
-    autocmd filetype python nnoremap <f8> :w <bar> :!python3 % <cr>
-    autocmd filetype cpp nnoremap <f8> :w <CR> :!g++ -std=c++11 % -o run <cr>
+    autocmd filetype python nnoremap <buffer> <f8> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
+    "autocmd filetype python nnoremap <f8> :w <bar> :!python3 % <cr>
+    autocmd filetype cpp nnoremap <f8> :w <CR> :!g++ -std=c++11 % -o run && .\run.exe <CR> :!rm run.exe <CR>
     autocmd filetype c nnoremap <f8> :w <bar> !make %:r && ./%:r <cr>
     autocmd filetype java nnoremap <f8> :w <bar> !javac % && java %:r <cr>
 augroup END

@@ -9,6 +9,7 @@ alias p='cat'
 alias pd='pwd'
 alias lsa='ls -a'
 alias lsl='ls -l'
+#alias ls='ls -1' # list in vertically
 alias pd='pwd'
 
 alias home='cd ~'

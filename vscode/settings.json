@@ -66,7 +66,7 @@
         "*.cpp": "cpp"
     },
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Material Theme Palenight",
+    "workbench.colorTheme": "One Dark Pro",
     "python.defaultInterpreterPath": "C:\\Users\\yixin\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
     "apexSql.servers": [
         {
@@ -102,5 +102,11 @@
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
     "vim.commandLineModeKeyBindings": [],
+    "cSpell.userWords": [
+        "heatmap",
+        "matplotlib",
+        "nltk",
+        "oversample"
+    ],
 
 }
