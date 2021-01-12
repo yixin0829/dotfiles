@@ -1,4 +1,4 @@
-cd D:/interview_prep
+cd D:/interview-prep
 set -o vi 
 
 alias q='exit'
@@ -14,3 +14,4 @@ alias pd='pwd'
 
 alias home='cd ~'
 alias root='cd /'
+
