@@ -1,4 +1,3 @@
-cd D:/interview-prep
 set -o vi 
 
 alias q='exit'

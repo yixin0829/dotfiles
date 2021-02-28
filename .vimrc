@@ -1,14 +1,56 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
+Plug 'itchyny/lightline.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kien/ctrlp.vim'
+Plug 'preservim/nerdcommenter'
+Plug 'ervandew/supertab'
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
 
 call plug#end()
+
+filetype plugin indent on
+
+" lightline plugin - display the status bar
+set laststatus=2
+
+" ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+" nerdtree config
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
+
+" ----------------- linux customization ---------------
+" diable bells/visualbells altogether
+set vb
+set t_vb = 
+" set cursorline when entering insert mode
+hi CursorLine cterm=NONE ctermbg=black guibg=#313738 " set highlght bg instead of default  underline
+:autocmd InsertEnter * set cursorline
+:autocmd InsertLeave * set nocursorline
+
+" mapping backspace in vim to delete chars
+noremap! <C-?> <C-h>
+"solved by run `stty erase ^?` in bash shell instead
+
+" convert file format from DOS(Windows) to Unix
+set ff=unix
+
+" -----------------------------------------------------
 
 set encoding=utf-8
 
 syntax on
-filetype plugin indent on
-noremap! <C-?> <C-h>
-set ff=unix
 
 set exrc
 set guicursor=
@@ -22,9 +64,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
-set textwidth=120
+set textwidth=100
 
-set nowrap
+set wrap
 set smartcase
 set noswapfile
 set incsearch
@@ -38,6 +80,12 @@ set updatetime=50
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+" since we're using lightline. do not show default -- INSERT --
+set noshowmode
+set scrolloff=5 " Keep 5 lines below and above the cursor"
+"set mouse+=a " copy with mouse without including the line numbersa & tailing space
+
 
 " ----------------- window splits --------------------
 "split navigations
@@ -78,10 +126,6 @@ nnoremap <buffer> <localleader>w :set wrap!<cr>
 nnoremap <F9> :buffers<CR>:buffer<Space>
 
 
-
-" ------------------ Plugin config --------------------
-
-
 "---------------------- asthetic ---------------------
 
 " true colours
@@ -92,4 +136,11 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
+" Lighline theme config
+let g:lightline = {'colorscheme': 'seoul256'}
+
+colorscheme gruvbox
+
 "-------------------------------------------------------
+
+autocmd filetype c nnoremap <f8> :w <bar> :!clear <CR>:!gcc -Wall % -o run && ./run <CR> :!rm run <CR>

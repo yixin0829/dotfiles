@@ -2,8 +2,6 @@
 	email = 56566212+yixin0829@users.noreply.github.com
 	name = yixin0829
 	editor = vim
-[credential]
-	helper = wincred
 [alias]
 	aa = add --all
  	st = status
@@ -21,6 +19,10 @@
 [init]
 	defaultBranch = main
 [core]
+	# true: let git automatically convert LF(Unix) to CRLF(Windows) when
+	# 	collaborating cross systems(e.g. Linux/macOS)
 	autocrlf = true
 	fscache = true
 	symlinks = true
+[credential]
+	helper = manager

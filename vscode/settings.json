@@ -1,7 +1,8 @@
 {
     "workbench.colorCustomizations": {
-
-
+        "[Gruvbox Dark Medium]": {
+            "peekViewEditor.matchHighlightBackground": "#303030"
+        }
     },
     "materialTheme.accent": "Remove accents",
     "editor.fontSize": 15,
@@ -11,7 +12,7 @@
         "ug146.eecg.utoronto.ca": "linux",
         "ug147.eecg.utoronto.ca": "linux"
     },
-    "files.autoSave": "off",
+    "files.autoSave": "afterDelay",
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "explorer.confirmDelete": false,
     "search.sortOrder": "type",
@@ -26,13 +27,13 @@
             "tag": "!",
             "color": "#FF2D00",
             "strikethrough": false,
-            "backgroundColor": "#70415b"
+            "backgroundColor": "transparent"
         },
         {
             "tag": "?",
             "color": "#3498DB",
             "strikethrough": false,
-            "backgroundColor": "#394d6e"
+            "backgroundColor": "transparent"
         },
         {
             "tag": "#",
@@ -50,7 +51,7 @@
             "tag": "@",
             "color": "#56afb3",
             "strikethrough": false,
-            "backgroundColor": "#476061"
+            "backgroundColor": "transparent"
         },
 
     ],
@@ -65,8 +66,7 @@
     "files.associations": {
         "*.cpp": "cpp"
     },
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
     "python.defaultInterpreterPath": "C:\\Users\\yixin\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "apexSql.servers": [
         {
@@ -101,7 +101,6 @@
     "jupyter.askForKernelRestart": false,
     "editor.lineNumbers": "relative",
     "editor.cursorBlinking": "solid",
-    "vim.commandLineModeKeyBindings": [],
     "cSpell.userWords": [
         "dotfiles",
         "heatmap",
@@ -111,5 +110,31 @@
     ],
     "rewrap.autoWrap.enabled": true,
     "rewrap.wrappingColumn": 80,
+    "cSpell.enabledLanguageIds": [
+        "markdown"
+    ],
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "workbench.statusBar.visible": true,
 
+
+    // Vim config
+    "vim.leader": "\\",
+    "vim.hlsearch": true,
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-u>": true,
+        "<C-r>": true,
+    },
+    "editor.mouseWheelScrollSensitivity": 2.5,
+    "vim.useCtrlKeys": false,
+    "editor.cursorSurroundingLines": 5,
+    "editor.hideCursorInOverviewRuler": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "workbench.startupEditor": "newUntitledFile",
+    // allow auto focus the peek window after <alt + f12>
+    "editor.peekWidgetDefaultFocus": "editor",
+    "editor.detectIndentation": false,
 }
