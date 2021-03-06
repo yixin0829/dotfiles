@@ -7,6 +7,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'ervandew/supertab'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
+Plug 'jsborjesson/vim-uppercase-sql'
 
 call plug#end()
 
@@ -55,6 +56,7 @@ syntax on
 set exrc
 set guicursor=
 set nu relativenumber
+set cmdheight=1
 set hlsearch
 set hidden
 set noerrorbells
@@ -64,19 +66,16 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
-set textwidth=100
+set textwidth=80
 
 set wrap
 set smartcase
 set noswapfile
 set incsearch
 
-" Give more space for displaying messages.
-set cmdheight=2
-
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=50
+set updatetime=500
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -140,6 +139,8 @@ endif
 let g:lightline = {'colorscheme': 'seoul256'}
 
 colorscheme gruvbox
+" transparent bg
+hi Normal guibg=NONE ctermbg=NONE
 
 "-------------------------------------------------------
 
