@@ -1,0 +1,1 @@
+/home/yixin0829/.bash_aliases
