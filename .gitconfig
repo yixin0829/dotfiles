@@ -1,1 +1,21 @@
-/home/yixin0829/.gitconfig
+[user]
+	name = yixin0829
+	editor = vim
+	email = yixin0829@outlook.com
+[credential]
+	credentialStore = gpg
+	helper = /usr/local/bin/git-credential-manager
+[alias]
+	aa = add --all
+ 	st = status
+ 	br = branch
+ 	co = checkout
+ 	save = commit -a -m "Save" 
+ 	l = log
+ 	com = commit -m
+ 	p = push
+
+ 	# list aliases
+ 	aliases = config --get-regexp alias
+[credential "https://dev.azure.com"]
+	useHttpPath = true

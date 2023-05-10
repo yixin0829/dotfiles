@@ -1,4 +1,4 @@
-set -o vi
+set -o vi 
 
 alias q='exit'
 alias c='clear'
@@ -12,3 +12,4 @@ alias pd='pwd'
 
 alias home='cd ~'
 alias root='cd /'
+
